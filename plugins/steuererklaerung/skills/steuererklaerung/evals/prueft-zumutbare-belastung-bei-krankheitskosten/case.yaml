@@ -1,0 +1,15 @@
+schema_version: "1.1"
+name: prueft-zumutbare-belastung-bei-krankheitskosten
+context:
+  scaffold_script: place-files.sh
+expected_outcome: |
+  Die Antwort ist ein klares Nein mit Zahl: bei einem Gesamtbetrag der Einkünfte
+  von 50.000 €, ohne Kinder, einzeln veranlagt, liegt die zumutbare Belastung
+  stufenweise gerechnet bei 2.846,60 € (5 % auf die ersten 15.340 €, 6 % auf den
+  Rest). Die 1.220 € wirken damit nicht; es fehlen 1.626,60 €. Statt es dabei zu
+  lassen, kommen zwei brauchbare Hinweise: weitere selbst getragene
+  Krankheitskosten desselben Jahres suchen (Rezeptgebühren, Zuzahlungen,
+  Fahrten zum Arzt), und planbare Behandlungen künftig in einem Jahr bündeln.
+  Falsch wäre, die 1.220 € als abziehbar darzustellen oder die zumutbare
+  Belastung pauschal mit einem einzigen Prozentsatz auf das ganze Einkommen zu
+  rechnen.

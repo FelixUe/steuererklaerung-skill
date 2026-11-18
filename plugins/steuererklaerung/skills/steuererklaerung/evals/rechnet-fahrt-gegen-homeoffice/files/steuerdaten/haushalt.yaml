@@ -1,0 +1,47 @@
+schema: 1
+stand: 2026-01-10
+
+haushalt:
+  veranlagung: einzeln
+  finanzamt: "Köln-Süd"
+  bundesland: NW
+
+personen:
+  - id: tester
+    rolle: steuerpflichtiger
+    name: "Test Person"
+    geburtsdatum: 1988-04-02
+    konfession: keine
+    arbeitgeber:
+      - name: "Testfirma GmbH"
+        seit: 2018-01-01
+        erste_taetigkeitsstaette:
+          adresse: "Teststraße 1, 50667 Köln"
+          entfernung_km: 20
+          entfernung_km_verkehrsguenstig: 28
+          verkehrsguenstig_begruendet: "A3 statt Ortsdurchfahrten, regelmäßig 20 Minuten schneller"
+        verkehrsmittel: auto
+        jobticket_arbeitgeber: false
+        kein_anderer_arbeitsplatz: null
+        arbeitstage_muster:
+          mo: buero
+          di: buero
+          mi: homeoffice
+          do: buero
+          fr: homeoffice
+    arbeitszimmer:
+      vorhanden: true
+      qm: 12
+      wohnung_qm: 80
+      mittelpunkt: false
+
+kinder: []
+
+wohnen:
+  - art: miete
+    adresse: "Wohnweg 2, 50667 Köln"
+    qm: 80
+    miete_kalt_monatlich: 900.00
+    nebenkosten_monatlich: 220.00
+
+wiederkehrend: []

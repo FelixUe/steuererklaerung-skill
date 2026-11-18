@@ -1,0 +1,15 @@
+{
+  "name": "felixue-skills",
+  "description": "Skills von FelixUe",
+  "owner": {
+    "name": "FelixUe",
+    "url": "https://github.com/FelixUe"
+  },
+  "plugins": [
+    {
+      "name": "steuererklaerung",
+      "source": "./plugins/steuererklaerung",
+      "description": "Deutsche Einkommensteuererklärung vorbereiten: Haushalts-Stammdaten einmalig anlegen, Belege aus Gmail und Google Drive sammeln, Varianten (Pendlerpauschale vs. Homeoffice vs. Arbeitszimmer) durchrechnen und ein Optimierungs-Dossier erstellen."
+    }
+  ]
+}

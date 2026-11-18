@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "jahr": 2025,
+  "stand": "2026-01-10",
+  "veranlagung": "einzeln",
+  "lohndaten": {
+    "tester": {
+      "bruttoarbeitslohn_eur": 58000.0,
+      "lohnsteuer_eur": 11200.0,
+      "kirchensteuer_eur": 0.0,
+      "jobticket_zuschuss_eur": 0.0
+    }
+  },
+  "arbeitstage": {
+    "tester": {
+      "arbeitstage_gesamt": 220,
+      "buero_tage": 220,
+      "homeoffice_tage": 0,
+      "grundlage": "immer im Büro",
+      "bestaetigt": true
+    }
+  },
+  "einkuenfte": { "gesamtbetrag_der_einkuenfte_eur": 50000.0 },
+  "belege": [
+    {
+      "id": "2025-020",
+      "person": "tester",
+      "kategorie": "krankheitskosten",
+      "bezeichnung": "Zahnersatz Eigenanteil",
+      "anbieter": "Zahnarztpraxis Dr. Test",
+      "datum_rechnung": "2025-04-03",
+      "datum_zahlung": "2025-04-20",
+      "betrag_brutto_eur": 900.0,
+      "erstattung_eur": 0.0,
+      "zahlungsart": "ueberweisung",
+      "status": "bestaetigt",
+      "notiz": ""
+    },
+    {
+      "id": "2025-021",
+      "person": "tester",
+      "kategorie": "krankheitskosten",
+      "bezeichnung": "Brille",
+      "anbieter": "Optiker Klar",
+      "datum_rechnung": "2025-08-14",
+      "datum_zahlung": "2025-08-14",
+      "betrag_brutto_eur": 320.0,
+      "erstattung_eur": 0.0,
+      "zahlungsart": "karte",
+      "status": "bestaetigt",
+      "notiz": ""
+    }
+  ],
+  "offen": []
+}

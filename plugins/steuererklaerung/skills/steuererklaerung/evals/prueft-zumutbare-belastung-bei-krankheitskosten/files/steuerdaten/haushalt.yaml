@@ -1,0 +1,35 @@
+schema: 1
+stand: 2026-01-10
+
+haushalt:
+  veranlagung: einzeln
+  finanzamt: "Köln-Süd"
+  bundesland: NW
+
+personen:
+  - id: tester
+    rolle: steuerpflichtiger
+    name: "Test Person"
+    geburtsdatum: 1988-04-02
+    konfession: keine
+    arbeitgeber:
+      - name: "Testfirma GmbH"
+        erste_taetigkeitsstaette:
+          adresse: "Teststraße 1, 50667 Köln"
+          entfernung_km: 12
+        verkehrsmittel: auto
+        arbeitstage_muster:
+          mo: buero
+          di: buero
+          mi: buero
+          do: buero
+          fr: buero
+
+kinder: []
+
+wohnen:
+  - art: miete
+    adresse: "Wohnweg 2, 50667 Köln"
+    qm: 70
+
+wiederkehrend: []

@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "jahr": 2025,
+  "stand": "2026-01-10",
+  "veranlagung": "einzeln",
+  "lohndaten": {
+    "tester": {
+      "arbeitgeber": "Testfirma GmbH",
+      "zeitraum": "2025-01-01 bis 2025-12-31",
+      "bruttoarbeitslohn_eur": 55000.0,
+      "lohnsteuer_eur": 9800.0,
+      "soli_eur": 0.0,
+      "kirchensteuer_eur": 0.0,
+      "jobticket_zuschuss_eur": 0.0,
+      "grossbuchstaben": [],
+      "kinderfreibetraege": 0.0
+    }
+  },
+  "arbeitstage": {
+    "tester": {
+      "arbeitstage_gesamt": 215,
+      "buero_tage": 130,
+      "homeoffice_tage": 85,
+      "grundlage": "Arbeitgeberbescheinigung liegt vor",
+      "bestaetigt": true
+    }
+  },
+  "einkuenfte": {
+    "gesamtbetrag_der_einkuenfte_eur": 52000.0
+  },
+  "belege": [
+    {
+      "id": "2025-001",
+      "person": "tester",
+      "kategorie": "arbeitsmittel",
+      "bezeichnung": "Monitor und Schreibtischlampe",
+      "anbieter": "Bürowelt",
+      "datum_rechnung": "2025-02-14",
+      "datum_zahlung": "2025-02-14",
+      "betrag_brutto_eur": 600.0,
+      "lohnanteil_eur": null,
+      "beruflicher_anteil_prozent": null,
+      "erstattung_eur": 0.0,
+      "zahlungsart": "ueberweisung",
+      "quelle": { "typ": "gmail", "ref": "Rechnung Bürowelt 2025-02-14" },
+      "datei": null,
+      "status": "bestaetigt",
+      "notiz": ""
+    }
+  ],
+  "offen": []
+}

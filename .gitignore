@@ -1,0 +1,42 @@
+# --- Persönliche Steuerdaten gehören NIE in dieses Repo ---
+# Das Arbeitsverzeichnis liegt standardmäßig außerhalb (~/Documents/Steuer),
+# aber falls doch mal etwas hier landet: hart ausgeschlossen.
+haushalt.yaml
+haushalt.yml
+belege.json
+berechnung.json
+dossier.md
+dossier.*.md
+fehlt.md
+/steuerjahr-*/
+/20[0-9][0-9]/
+belege/
+Belege/
+*.pdf
+!docs/**/*.pdf
+*.lohnsteuerbescheinigung.*
+*.lohnabrechnung.*
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# Ausnahme: die Testdaten der Evals sind erfundene Beispielwerte und gehören ins Repo.
+!**/evals/**/haushalt.yaml
+!**/evals/**/belege.json
+
+# --- Eval-Workspace ---
+steuererklaerung-workspace/
+**/evals/results/
+
+# --- OS / Editor ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp

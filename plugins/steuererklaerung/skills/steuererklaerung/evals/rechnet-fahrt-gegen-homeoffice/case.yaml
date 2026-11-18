@@ -1,0 +1,13 @@
+schema_version: "1.1"
+name: rechnet-fahrt-gegen-homeoffice
+context:
+  scaffold_script: place-files.sh
+expected_outcome: |
+  Die Varianten werden mit dem mitgelieferten Skript gerechnet, nicht im Kopf.
+  Bei 130 Bürotagen, 85 Homeoffice-Tagen und 20 bzw. 28 km ergibt sich für 2025:
+  kürzeste Strecke plus Tagespauschale 1.290,00 €, verkehrsgünstigere Strecke plus
+  Tagespauschale 1.685,20 €. Die verkehrsgünstigere Strecke wird als günstigste
+  Variante genannt, mit dem Hinweis auf die nötige Begründung. Zusammen mit den
+  600 € Arbeitsmitteln liegen die Werbungskosten über dem Arbeitnehmer-Pauschbetrag
+  von 1.230 €, was auch gesagt wird. Am Ende steht ein Dossier als Datei, nach
+  Abschnitten gegliedert, mit Zuordnung zur Anlage N.

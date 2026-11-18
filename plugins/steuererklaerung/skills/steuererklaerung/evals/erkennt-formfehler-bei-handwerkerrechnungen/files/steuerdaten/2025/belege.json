@@ -1,0 +1,87 @@
+{
+  "schema": 1,
+  "jahr": 2025,
+  "stand": "2026-01-10",
+  "veranlagung": "einzeln",
+  "lohndaten": {
+    "tester": {
+      "bruttoarbeitslohn_eur": 58000.0,
+      "lohnsteuer_eur": 11200.0,
+      "kirchensteuer_eur": 0.0,
+      "jobticket_zuschuss_eur": 0.0
+    }
+  },
+  "arbeitstage": {
+    "tester": {
+      "arbeitstage_gesamt": 220,
+      "buero_tage": 220,
+      "homeoffice_tage": 0,
+      "grundlage": "immer im Büro",
+      "bestaetigt": true
+    }
+  },
+  "einkuenfte": { "gesamtbetrag_der_einkuenfte_eur": 55000.0 },
+  "belege": [
+    {
+      "id": "2025-010",
+      "person": "haushalt",
+      "kategorie": "handwerkerleistung",
+      "bezeichnung": "Heizungserneuerung",
+      "anbieter": "Sanitär Schmidt GmbH",
+      "datum_rechnung": "2025-03-05",
+      "datum_zahlung": "2025-03-20",
+      "betrag_brutto_eur": 3000.0,
+      "lohnanteil_eur": 1500.0,
+      "erstattung_eur": 0.0,
+      "zahlungsart": "ueberweisung",
+      "status": "bestaetigt",
+      "notiz": ""
+    },
+    {
+      "id": "2025-011",
+      "person": "haushalt",
+      "kategorie": "handwerkerleistung",
+      "bezeichnung": "Malerarbeiten Treppenhaus",
+      "anbieter": "Maler Kurz",
+      "datum_rechnung": "2025-06-11",
+      "datum_zahlung": "2025-06-11",
+      "betrag_brutto_eur": 800.0,
+      "lohnanteil_eur": 800.0,
+      "erstattung_eur": 0.0,
+      "zahlungsart": "bar",
+      "status": "bestaetigt",
+      "notiz": "auf der Rechnung steht Barzahlung dankend erhalten"
+    },
+    {
+      "id": "2025-012",
+      "person": "haushalt",
+      "kategorie": "handwerkerleistung",
+      "bezeichnung": "Fenstertausch Wohnzimmer",
+      "anbieter": "Tischlerei Nord",
+      "datum_rechnung": "2025-09-18",
+      "datum_zahlung": "2025-09-30",
+      "betrag_brutto_eur": 2000.0,
+      "lohnanteil_eur": null,
+      "erstattung_eur": 0.0,
+      "zahlungsart": "ueberweisung",
+      "status": "bestaetigt",
+      "notiz": "Rechnung weist nur einen Gesamtbetrag aus"
+    },
+    {
+      "id": "2025-013",
+      "person": "haushalt",
+      "kategorie": "haushaltsnahe_dienstleistung",
+      "bezeichnung": "Gartenpflege",
+      "anbieter": "Grünservice Rhein",
+      "datum_rechnung": "2025-05-02",
+      "datum_zahlung": "2025-05-08",
+      "betrag_brutto_eur": 600.0,
+      "lohnanteil_eur": 600.0,
+      "erstattung_eur": 0.0,
+      "zahlungsart": "ueberweisung",
+      "status": "bestaetigt",
+      "notiz": ""
+    }
+  ],
+  "offen": []
+}

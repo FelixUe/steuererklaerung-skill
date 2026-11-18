@@ -1,0 +1,206 @@
+{
+  "schema": 1,
+  "stand": "2026-11-18",
+  "hinweis": "Pauschalen, Höchstbeträge und Fristen für die deutsche Einkommensteuer. Recherchiert am 2026-11-18 aus öffentlichen Steuerportalen, NICHT aus amtlichen Quellen. Vor dem Verlassen auf einen Wert das Feld 'unsicher' des Jahres prüfen und bei älterem Stand neu recherchieren. Korrigierte Werte hier eintragen und 'stand' aktualisieren.",
+  "quellen": [
+    "https://www.steuertipps.de/finanzamt-formalitaeten/pauschbetraege-freibetraege-und-hoechstbetraege-fuer-die-steuererklaerung",
+    "https://www.haufe.de/personal/entgelt/erhoehung-der-entfernungspauschale_78_532080.html",
+    "https://www.steuertipps.de/finanzamt-formalitaeten/steueraenderungsgesetz-2025-steueraenderungen-2026",
+    "https://www.lohnsteuer-kompakt.de/steuerwissen/kinderbetreuungskosten-hoeherer-sonderausgabenabzug-2025/",
+    "https://www.vlh.de/wohnen-vermieten/eigentum/haushaltsnahe-dienstleistungen-so-sparen-sie-steuern.html"
+  ],
+
+  "konstant": {
+    "zumutbare_belastung": {
+      "paragraph": "§ 33 Abs. 3 EStG",
+      "berechnung": "stufenweise (BFH VI R 75/14): jede Einkommensstufe wird nur mit ihrem eigenen Satz belastet",
+      "grenzen_eur": [15340, 51130],
+      "saetze": {
+        "ohne_kinder_grundtarif": [0.05, 0.06, 0.07],
+        "ohne_kinder_splitting": [0.04, 0.05, 0.06],
+        "kinder_1_bis_2": [0.02, 0.03, 0.04],
+        "kinder_ab_3": [0.01, 0.01, 0.02]
+      }
+    },
+    "behinderten_pauschbetrag_eur": {
+      "20": 384, "30": 620, "40": 860, "50": 1140, "60": 1440,
+      "70": 1780, "80": 2120, "90": 2460, "100": 2840,
+      "merkzeichen_h_bl_tbl": 7400
+    },
+    "pflege_pauschbetrag_eur": {
+      "pflegegrad_2": 600,
+      "pflegegrad_3": 1100,
+      "pflegegrad_4_5_oder_hilflos": 1800
+    },
+    "arbeitsmittel": {
+      "sofortabzug_grenze_brutto_eur": 952,
+      "hinweis_sofortabzug": "800 € netto entspricht 952 € brutto bei 19 % USt; darüber Abschreibung über die Nutzungsdauer",
+      "digitale_wirtschaftsgueter_nutzungsdauer_jahre": 1,
+      "hinweis_digital": "Computer, Peripherie und Software: BMF lässt 1 Jahr Nutzungsdauer zu, also voller Abzug im Anschaffungsjahr",
+      "pauschale_ohne_nachweis_eur": 110,
+      "hinweis_pauschale": "110 € Arbeitsmittel ohne Einzelnachweis ist Verwaltungspraxis, kein Gesetz — wird nicht von jedem Finanzamt gewährt"
+    },
+    "telefon_internet_pauschal": {
+      "anteil": 0.20,
+      "max_eur_pro_monat": 20,
+      "max_eur_pro_jahr": 240,
+      "hinweis": "pauschaler beruflicher Anteil ohne Einzelnachweis"
+    },
+    "kontofuehrung_pauschal_eur_pro_jahr": 16,
+    "umzug_beruflich": {
+      "hinweis": "Umzugskostenpauschale ändert sich unterjährig per BMF-Schreiben — bei Bedarf für das konkrete Umzugsdatum neu recherchieren"
+    }
+  },
+
+  "jahre": {
+    "2023": {
+      "grundfreibetrag_eur": 10908,
+      "arbeitnehmer_pauschbetrag_eur": 1230,
+      "sonderausgaben_pauschbetrag_eur": { "einzel": 36, "zusammen": 72 },
+      "entfernungspauschale": {
+        "stufen": [
+          { "bis_km": 20, "eur_pro_km": 0.30 },
+          { "bis_km": null, "eur_pro_km": 0.38 }
+        ],
+        "hoechstbetrag_ohne_eigenes_kfz_eur": 4500
+      },
+      "homeoffice_tagespauschale": { "eur_pro_tag": 6, "max_tage": 210, "hoechstbetrag_eur": 1260 },
+      "arbeitszimmer_jahrespauschale_eur": 1260,
+      "kinderbetreuung": { "anteil": 0.6667, "hoechstbetrag_eur": 4000, "alter_bis_jahre": 14 },
+      "schulgeld": { "anteil": 0.30, "hoechstbetrag_eur": 5000 },
+      "paragraph_35a": {
+        "haushaltsnahe_dienstleistungen": { "satz": 0.20, "hoechstbetrag_eur": 4000, "bemessungsgrundlage_max_eur": 20000 },
+        "handwerkerleistungen": { "satz": 0.20, "hoechstbetrag_eur": 1200, "bemessungsgrundlage_max_eur": 6000 },
+        "minijob_im_haushalt": { "satz": 0.20, "hoechstbetrag_eur": 510, "bemessungsgrundlage_max_eur": 2550 }
+      },
+      "kindergeld_eur_pro_monat": 250,
+      "kinderfreibetrag_je_elternteil_eur": 3012,
+      "bea_freibetrag_je_elternteil_eur": 1464,
+      "entlastungsbetrag_alleinerziehende": { "grundbetrag_eur": 4260, "je_weiteres_kind_eur": 240 },
+      "verpflegungspauschale_inland_eur": { "ganzer_tag": 28, "an_abreise_oder_ueber_8h": 14 },
+      "spenden_hoechstanteil_einkuenfte": 0.20,
+      "gewerkschaftsbeitrag_zusaetzlich_zum_pauschbetrag": false,
+      "fristen": {
+        "ohne_berater": "2024-09-02",
+        "mit_berater": "2025-06-02",
+        "freiwillig_bis": "2027-12-31"
+      },
+      "unsicher": ["verpflegungspauschale_inland_eur", "fristen"]
+    },
+
+    "2024": {
+      "grundfreibetrag_eur": 11604,
+      "arbeitnehmer_pauschbetrag_eur": 1230,
+      "sonderausgaben_pauschbetrag_eur": { "einzel": 36, "zusammen": 72 },
+      "entfernungspauschale": {
+        "stufen": [
+          { "bis_km": 20, "eur_pro_km": 0.30 },
+          { "bis_km": null, "eur_pro_km": 0.38 }
+        ],
+        "hoechstbetrag_ohne_eigenes_kfz_eur": 4500
+      },
+      "homeoffice_tagespauschale": { "eur_pro_tag": 6, "max_tage": 210, "hoechstbetrag_eur": 1260 },
+      "arbeitszimmer_jahrespauschale_eur": 1260,
+      "kinderbetreuung": { "anteil": 0.6667, "hoechstbetrag_eur": 4000, "alter_bis_jahre": 14 },
+      "schulgeld": { "anteil": 0.30, "hoechstbetrag_eur": 5000 },
+      "paragraph_35a": {
+        "haushaltsnahe_dienstleistungen": { "satz": 0.20, "hoechstbetrag_eur": 4000, "bemessungsgrundlage_max_eur": 20000 },
+        "handwerkerleistungen": { "satz": 0.20, "hoechstbetrag_eur": 1200, "bemessungsgrundlage_max_eur": 6000 },
+        "minijob_im_haushalt": { "satz": 0.20, "hoechstbetrag_eur": 510, "bemessungsgrundlage_max_eur": 2550 }
+      },
+      "kindergeld_eur_pro_monat": 250,
+      "kinderfreibetrag_je_elternteil_eur": 3306,
+      "bea_freibetrag_je_elternteil_eur": 1464,
+      "entlastungsbetrag_alleinerziehende": { "grundbetrag_eur": 4260, "je_weiteres_kind_eur": 240 },
+      "verpflegungspauschale_inland_eur": { "ganzer_tag": 28, "an_abreise_oder_ueber_8h": 14 },
+      "spenden_hoechstanteil_einkuenfte": 0.20,
+      "gewerkschaftsbeitrag_zusaetzlich_zum_pauschbetrag": false,
+      "fristen": {
+        "ohne_berater": "2025-07-31",
+        "mit_berater": "2026-04-30",
+        "freiwillig_bis": "2028-12-31"
+      },
+      "unsicher": ["verpflegungspauschale_inland_eur"]
+    },
+
+    "2025": {
+      "grundfreibetrag_eur": 12096,
+      "arbeitnehmer_pauschbetrag_eur": 1230,
+      "sonderausgaben_pauschbetrag_eur": { "einzel": 36, "zusammen": 72 },
+      "entfernungspauschale": {
+        "stufen": [
+          { "bis_km": 20, "eur_pro_km": 0.30 },
+          { "bis_km": null, "eur_pro_km": 0.38 }
+        ],
+        "hoechstbetrag_ohne_eigenes_kfz_eur": 4500
+      },
+      "homeoffice_tagespauschale": { "eur_pro_tag": 6, "max_tage": 210, "hoechstbetrag_eur": 1260 },
+      "arbeitszimmer_jahrespauschale_eur": 1260,
+      "kinderbetreuung": { "anteil": 0.80, "hoechstbetrag_eur": 4800, "alter_bis_jahre": 14 },
+      "schulgeld": { "anteil": 0.30, "hoechstbetrag_eur": 5000 },
+      "paragraph_35a": {
+        "haushaltsnahe_dienstleistungen": { "satz": 0.20, "hoechstbetrag_eur": 4000, "bemessungsgrundlage_max_eur": 20000 },
+        "handwerkerleistungen": { "satz": 0.20, "hoechstbetrag_eur": 1200, "bemessungsgrundlage_max_eur": 6000 },
+        "minijob_im_haushalt": { "satz": 0.20, "hoechstbetrag_eur": 510, "bemessungsgrundlage_max_eur": 2550 }
+      },
+      "kindergeld_eur_pro_monat": 255,
+      "kinderfreibetrag_je_elternteil_eur": 3336,
+      "bea_freibetrag_je_elternteil_eur": 1464,
+      "entlastungsbetrag_alleinerziehende": { "grundbetrag_eur": 4260, "je_weiteres_kind_eur": 240 },
+      "verpflegungspauschale_inland_eur": { "ganzer_tag": 28, "an_abreise_oder_ueber_8h": 14 },
+      "spenden_hoechstanteil_einkuenfte": 0.20,
+      "gewerkschaftsbeitrag_zusaetzlich_zum_pauschbetrag": false,
+      "fristen": {
+        "ohne_berater": "2026-07-31",
+        "mit_berater": "2027-03-01",
+        "freiwillig_bis": "2029-12-31"
+      },
+      "neu_in_diesem_jahr": [
+        "Kinderbetreuungskosten: 80 % statt zwei Drittel, Höchstbetrag 4.800 € statt 4.000 € (Jahressteuergesetz 2024)"
+      ],
+      "unsicher": ["verpflegungspauschale_inland_eur"]
+    },
+
+    "2026": {
+      "grundfreibetrag_eur": 12348,
+      "arbeitnehmer_pauschbetrag_eur": 1230,
+      "sonderausgaben_pauschbetrag_eur": { "einzel": 36, "zusammen": 72 },
+      "entfernungspauschale": {
+        "stufen": [
+          { "bis_km": null, "eur_pro_km": 0.38 }
+        ],
+        "hoechstbetrag_ohne_eigenes_kfz_eur": 4500
+      },
+      "homeoffice_tagespauschale": { "eur_pro_tag": 6, "max_tage": 210, "hoechstbetrag_eur": 1260 },
+      "arbeitszimmer_jahrespauschale_eur": 1260,
+      "kinderbetreuung": { "anteil": 0.80, "hoechstbetrag_eur": 4800, "alter_bis_jahre": 14 },
+      "schulgeld": { "anteil": 0.30, "hoechstbetrag_eur": 5000 },
+      "paragraph_35a": {
+        "haushaltsnahe_dienstleistungen": { "satz": 0.20, "hoechstbetrag_eur": 4000, "bemessungsgrundlage_max_eur": 20000 },
+        "handwerkerleistungen": { "satz": 0.20, "hoechstbetrag_eur": 1200, "bemessungsgrundlage_max_eur": 6000 },
+        "minijob_im_haushalt": { "satz": 0.20, "hoechstbetrag_eur": 510, "bemessungsgrundlage_max_eur": 2550 }
+      },
+      "kindergeld_eur_pro_monat": 259,
+      "kinderfreibetrag_je_elternteil_eur": 3414,
+      "bea_freibetrag_je_elternteil_eur": 1464,
+      "entlastungsbetrag_alleinerziehende": { "grundbetrag_eur": 4260, "je_weiteres_kind_eur": 240 },
+      "verpflegungspauschale_inland_eur": { "ganzer_tag": 28, "an_abreise_oder_ueber_8h": 14 },
+      "spenden_hoechstanteil_einkuenfte": 0.20,
+      "gewerkschaftsbeitrag_zusaetzlich_zum_pauschbetrag": true,
+      "fristen": {
+        "ohne_berater": "2027-08-02",
+        "mit_berater": "2028-02-29",
+        "freiwillig_bis": "2030-12-31"
+      },
+      "neu_in_diesem_jahr": [
+        "Entfernungspauschale einheitlich 0,38 €/km ab dem ersten Kilometer (Steueränderungsgesetz 2025); gilt auch für Familienheimfahrten",
+        "Gewerkschafts- und Berufsverbandsbeiträge zusätzlich zum Arbeitnehmer-Pauschbetrag abziehbar",
+        "Mobilitätsprämie entfristet"
+      ],
+      "ausblick": [
+        "Für 2027 ist geplant (NICHT beschlossen, Stand 2026-11-18), den Handwerkerbonus von 20 % auf 15 % und den Höchstbetrag von 1.200 € auf 900 € zu senken. Falls das kommt, lohnt es sich, Handwerkerzahlungen noch in 2026 zu leisten."
+      ],
+      "unsicher": ["verpflegungspauschale_inland_eur", "fristen", "gewerkschaftsbeitrag_zusaetzlich_zum_pauschbetrag"]
+    }
+  }
+}

@@ -1,0 +1,198 @@
+# Stammdaten des Haushalts — einmal anlegen, jährlich kurz prüfen.
+#
+# Diese Datei bleibt lokal und gehört NICHT in ein Git-Repo.
+# Alle Felder sind optional; leere oder gelöschte Felder werden ignoriert.
+# Beträge immer in Euro als Zahl (1234.56), Datumsangaben als JJJJ-MM-TT.
+
+schema: 1
+stand: 2026-11-18          # wann zuletzt geprüft
+
+haushalt:
+  veranlagung: zusammen     # zusammen | einzeln | allein
+  finanzamt: "Hamburg-Nord"
+  bundesland: HH            # Kürzel für die Feiertagsberechnung: BW BY BE BB HB HH HE MV NI NW RP SL SN ST SH TH
+  erstattung_bisher:        # Gedächtnis: was kam in den Vorjahren zurück
+    2023: 1180.00
+    2024: 1420.00
+
+personen:
+  - id: felix
+    rolle: steuerpflichtiger      # steuerpflichtiger | ehepartner
+    name: "Felix Beispiel"
+    geburtsdatum: 1990-06-14
+    steuer_id: null               # optional, 11-stellige Steuer-Identifikationsnummer
+    konfession: ev                # ev | rk | keine | andere  -> Kirchensteuer als Sonderausgabe
+    behinderung_grad: null        # GdB, falls Pauschbetrag in Frage kommt
+
+    arbeitgeber:
+      - name: "Muster GmbH"
+        seit: 2019-04-01
+        bis: null
+        erste_taetigkeitsstaette:
+          adresse: "Musterstraße 1, 20095 Hamburg"
+          entfernung_km: 23                  # einfache Entfernung, kürzeste Straßenverbindung
+          entfernung_km_verkehrsguenstig: 31 # längere, aber regelmäßig schnellere Strecke
+          verkehrsguenstig_begruendet: "A7 statt Innenstadt, ca. 15 Min schneller"
+        verkehrsmittel: auto               # auto | oepnv | rad | gemischt
+        oepnv_kosten_jaehrlich: null       # tatsächliche Kosten, falls ÖPNV
+        jobticket_arbeitgeber: false       # steuerfreier Zuschuss kürzt die Entfernungspauschale
+        # true nur, wenn der Arbeitgeber dauerhaft KEINEN Arbeitsplatz bereitstellt.
+        # Dann gilt die Tagespauschale auch für Bürotage (§ 4 Abs. 5 Nr. 6c EStG).
+        # Bei null bleibt die Variante unberücksichtigt und wird nur als Hinweis genannt.
+        kein_anderer_arbeitsplatz: null
+        arbeitstage_muster:                # pro Wochentag: buero | homeoffice | frei
+          mo: buero
+          di: buero
+          mi: homeoffice
+          do: buero
+          fr: homeoffice
+        dienstreisen_regelmaessig: false
+
+    arbeitszimmer:
+      vorhanden: true
+      qm: 14
+      wohnung_qm: 96
+      mittelpunkt: false        # true nur, wenn der qualitative Tätigkeitsmittelpunkt dort liegt
+      abschliessbar: true
+
+    mitgliedschaften:
+      - art: gewerkschaft       # gewerkschaft | berufsverband | kammer
+        name: "ver.di"
+        beitrag_jaehrlich: 384.00
+        mail_absender: "beitrag@verdi.de"
+
+    arbeitsmittel_wiederkehrend:
+      - bezeichnung: "Fachliteratur"
+        typisch_eur: 120.00
+      - bezeichnung: "Büromaterial"
+        typisch_eur: 80.00
+
+    fortbildung_geplant:
+      - bezeichnung: "Zertifizierung XY"
+        typisch_eur: 1200.00
+
+  - id: partner
+    rolle: ehepartner
+    name: "Anna Beispiel"
+    geburtsdatum: 1992-02-03
+    konfession: keine
+    arbeitgeber:
+      - name: "Beispiel AG"
+        seit: 2021-09-01
+        erste_taetigkeitsstaette:
+          adresse: "Beispielweg 7, 22765 Hamburg"
+          entfernung_km: 8
+        verkehrsmittel: oepnv
+        oepnv_kosten_jaehrlich: 588.00
+        jobticket_arbeitgeber: true
+        arbeitstage_muster:
+          mo: buero
+          di: homeoffice
+          mi: buero
+          do: buero
+          fr: frei
+
+kinder:
+  - id: kind1
+    name: "Jonas Beispiel"
+    geburtsdatum: 2019-05-12
+    haushaltszugehoerig: true          # Voraussetzung für Kinderbetreuungskosten
+    kindergeld_empfaenger: felix
+    betreuung:
+      - art: kita                      # kita | tagesmutter | hort | ferienbetreuung | au_pair
+        einrichtung: "Kita Sonnenblume"
+        monatlich: 210.00
+        verpflegungsanteil_monatlich: 60.00   # Essensgeld ist NICHT absetzbar
+        arbeitgeberzuschuss_monatlich: 0.00   # steuerfreier Zuschuss mindert die Kosten
+        mail_absender: "beitraege@kita-sonnenblume.de"
+    schule:
+      art: null                        # staatlich | privat_ersatzschule | international
+      schulgeld_jaehrlich: null        # nur anerkannte Ersatz-/Ergänzungsschulen, ohne Verpflegung
+
+  - id: kind2
+    name: "Mia Beispiel"
+    geburtsdatum: 2022-11-30
+    haushaltszugehoerig: true
+    betreuung:
+      - art: tagesmutter
+        einrichtung: "Tagespflege Meier"
+        monatlich: 380.00
+        arbeitgeberzuschuss_monatlich: 100.00
+
+wohnen:
+  - art: miete                          # miete | eigentum
+    adresse: "Wohnstraße 5, 22767 Hamburg"
+    seit: 2020-08-01
+    qm: 96
+    miete_kalt_monatlich: 1150.00
+    nebenkosten_monatlich: 280.00
+    hausverwaltung: "Verwaltung Nord GmbH"
+    nebenkostenabrechnung_mail_absender: "abrechnung@verwaltung-nord.de"
+    hinweis: >-
+      In der Nebenkostenabrechnung stecken haushaltsnahe Dienstleistungen
+      (Hausmeister, Treppenhausreinigung, Gartenpflege, Schornsteinfeger) —
+      jedes Jahr die Position "haushaltsnahe Dienstleistungen nach § 35a" suchen.
+
+# Alles, was jedes Jahr wiederkommt. Das ist die Checkliste, gegen die Phase 2 abgleicht.
+# kategorie: siehe references/kategorien.md
+wiederkehrend:
+  - kategorie: haushaltsnahe_dienstleistung
+    bezeichnung: "Schornsteinfeger"
+    anbieter: "Bezirksschornsteinfeger Müller"
+    mail_absender: "rechnung@kaminfeger-hh.de"
+    typisch_eur: 65.00
+    monat_typisch: 3
+
+  - kategorie: haushaltsnahe_dienstleistung
+    bezeichnung: "Nebenkostenabrechnung, § 35a-Anteil"
+    anbieter: "Verwaltung Nord GmbH"
+    mail_absender: "abrechnung@verwaltung-nord.de"
+    typisch_eur: 420.00
+    monat_typisch: 9
+
+  - kategorie: versicherung_vorsorge
+    bezeichnung: "Berufsunfähigkeitsversicherung"
+    anbieter: "Beispiel Leben AG"
+    mail_absender: "service@beispiel-leben.de"
+    typisch_eur: 720.00
+    monat_typisch: 2
+    hinweis: "Jahresbescheinigung kommt im Februar"
+
+  - kategorie: spende
+    bezeichnung: "Dauerspende Hilfswerk"
+    anbieter: "Hilfswerk e.V."
+    mail_absender: "spenden@hilfswerk.de"
+    typisch_eur: 240.00
+    monat_typisch: 1
+    hinweis: "Zuwendungsbestätigung für das Vorjahr kommt im Januar"
+
+  - kategorie: arbeitsmittel
+    bezeichnung: "Telefon-/Internetanteil beruflich"
+    typisch_eur: 240.00
+    hinweis: "20 % der Kosten, max. 20 €/Monat, ohne Einzelnachweis"
+
+# Gezielte Suchhilfen für Phase 2. Ergänzen, sobald eine neue Quelle auftaucht.
+quellen:
+  gmail:
+    absender_whitelist:
+      - "abrechnung@verwaltung-nord.de"
+      - "beitraege@kita-sonnenblume.de"
+      - "spenden@hilfswerk.de"
+      - "service@beispiel-leben.de"
+    zusatz_stichwoerter:
+      - "Zuwendungsbestätigung"
+      - "Beitragsbescheinigung"
+      - "Jahressteuerbescheinigung"
+  drive:
+    ordner:
+      - "Steuer"
+      - "Finanzen/Lohnabrechnungen"
+    lohnabrechnung_namensmuster: "Lohnabrechnung_{jahr}_12"
+
+# Was das Finanzamt in Vorjahren gestrichen oder nachgefragt hat.
+# Die wertvollste Liste der Datei — sie verhindert, dass man denselben Streit zweimal führt.
+erfahrungen:
+  - jahr: 2023
+    notiz: "Arbeitszimmer als Mittelpunkt wurde nicht anerkannt — seither nur Tagespauschale."
+  - jahr: 2024
+    notiz: "Nachweis der Homeoffice-Tage angefordert; Arbeitgeberbescheinigung hat genügt."

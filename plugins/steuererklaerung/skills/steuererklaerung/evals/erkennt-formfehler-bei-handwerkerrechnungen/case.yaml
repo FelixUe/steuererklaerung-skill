@@ -1,0 +1,13 @@
+schema_version: "1.1"
+name: erkennt-formfehler-bei-handwerkerrechnungen
+context:
+  scaffold_script: place-files.sh
+expected_outcome: |
+  Zwei der vier Rechnungen haben einen Formfehler, und beide werden benannt,
+  ohne dass danach gefragt wurde: die bar gezahlten Malerarbeiten (800 €) sind
+  nicht abziehbar, und beim Fenstertausch (2.000 €) fehlt der getrennt
+  ausgewiesene Lohnanteil, weshalb eine korrigierte Rechnung beim Handwerker
+  anzufordern ist. Angesetzt werden nur die Heizungserneuerung mit 1.500 €
+  Lohnanteil (300 € Ermäßigung) und die Gartenpflege mit 600 € (120 €
+  Ermäßigung), zusammen 420 € Steuerermäßigung. Es wird klar, dass § 35a direkt
+  die Steuer mindert und nicht das Einkommen, und dass Material nicht zählt.

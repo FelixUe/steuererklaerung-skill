@@ -1,0 +1,21 @@
+{
+  "name": "steuererklaerung",
+  "description": "Deutsche Einkommensteuererklärung vorbereiten: Haushalts-Stammdaten einmalig anlegen, Belege aus Gmail und Google Drive sammeln, Varianten (Pendlerpauschale vs. Homeoffice vs. Arbeitszimmer) durchrechnen und ein Optimierungs-Dossier erstellen.",
+  "version": "0.1.0",
+  "author": {
+    "name": "FelixUe",
+    "url": "https://github.com/FelixUe"
+  },
+  "homepage": "https://github.com/FelixUe/steuererklaerung-skill",
+  "license": "MIT",
+  "keywords": [
+    "steuererklaerung",
+    "steuern",
+    "germany",
+    "elster",
+    "belege",
+    "werbungskosten",
+    "pendlerpauschale",
+    "homeoffice"
+  ]
+}
